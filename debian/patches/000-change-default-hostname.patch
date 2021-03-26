@@ -1,0 +1,22 @@
+Author: Kevin Chevreuil - Kaisen <kaisen@kaisenlinux.org>
+
+--- netcfg-1.171.orig/netcfg-common.c
++++ netcfg-1.171/netcfg-common.c
+@@ -1040,7 +1040,7 @@ int netcfg_get_hostname(struct debconfcl
+                       "maxhostnamelen", buf);
+             debconf_input(client, "high", "netcfg/invalid_hostname");
+             debconf_go(client);
+-            debconf_set(client, template, "debian");
++            debconf_set(client, template, "kaisenlinux");
+             *hostname = '\0';
+             continue;
+         }
+@@ -1066,7 +1066,7 @@ int netcfg_get_hostname(struct debconfcl
+                       "maxhostnamelen", buf);
+             debconf_input(client, "high", "netcfg/invalid_hostname");
+             debconf_go(client);
+-            debconf_set(client, template, "debian");
++            debconf_set(client, template, "kaisenlinux");
+             *hostname = '\0';
+         } else {
+             break;
